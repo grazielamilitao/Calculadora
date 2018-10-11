@@ -125,13 +125,19 @@ public class MenuController implements Initializable {
     private void Historico(ActionEvent event) throws IOException{
          
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource(View.Histórico));
+        fxmlLoader.setLocation(getClass().getResource("/View.Histórico.fxml"));
         Scene scene = new Scene(fxmlLoader.load(),600,400);
         Stage stage = new Stage();
         stage.setTitle("Historico");
         stage.setScene(scene);
         stage.show();
+    }
+    //private void Historico(ActionEvent event) {
+        
+   // }
     
+    @FXML
+    private void chamarHistorico(ActionEvent event) {
     }
     
 }

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <TableView fx:id="tabelaHistorico" layoutX="63.0" layoutY="66.0" prefHeight="284.0" prefWidth="474.0">
+        <columns>
+        <TableColumn text="N° 1">
+              <cellValueFactory>
+                  <PropertyValueFactory property="num1" /> 
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn text="N° 2">
+              <cellValueFactory>
+                  <PropertyValueFactory property="num2" /> 
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn text="Resultado">
+              <cellValueFactory>
+                  <PropertyValueFactory property="resul" /> 
+              </cellValueFactory>
+          </TableColumn>
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -18,6 +18,12 @@
          <font>
             <Font size="18.0" />
          </font></Label>
+      <Button layoutX="164.0" layoutY="131.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="74.0" text="+" />
+      <Button layoutX="282.0" layoutY="131.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="74.0" text="-" />
+      <Button layoutX="282.0" layoutY="213.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="74.0" text="/" />
+      <Button layoutX="164.0" layoutY="213.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="74.0" text="*" />
+      <Label layoutX="215.0" layoutY="287.0" prefHeight="48.0" prefWidth="100.0" text="       Resultado" textAlignment="CENTER" />
+      <Button layoutX="185.0" layoutY="344.0" mnemonicParsing="false" onAction="#chamarHistorico" prefHeight="64.0" prefWidth="161.0" text="Histórico" />
       <Button fx:id="btnSoma" layoutX="164.0" layoutY="131.0" mnemonicParsing="false" onAction="#Soma" prefHeight="48.0" prefWidth="74.0" text="+" />
       <Button fx:id="btnSub" layoutX="282.0" layoutY="131.0" mnemonicParsing="false" onAction="#Subtracao" prefHeight="48.0" prefWidth="74.0" text="-" />
       <Button fx:id="btnDivi" layoutX="282.0" layoutY="213.0" mnemonicParsing="false" onAction="#Divisao" prefHeight="48.0" prefWidth="74.0" text="/" />
