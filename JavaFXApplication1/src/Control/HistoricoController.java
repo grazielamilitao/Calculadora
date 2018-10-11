@@ -23,7 +23,7 @@ import javax.persistence.Query;
  *
  * @author 04150107211
  */
-public class Historico {
+public class HistoricoController {
     
     @FXML
     private TableView tabelaHistórico;
@@ -33,15 +33,14 @@ public class Historico {
     }   
     
     private void listar() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("Calculadora");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("projetoDS");
         EntityManager em = emf.createEntityManager();
          
         Query query = em.createQuery("SELECT a FROM Calculadora as a");
-        List<Calculadora> alunos = query.getResultList();
+        List<Calculadora> calc = query.getResultList();
         
-        ObservableList oHistorico = FXCollections.observableArrayList(alunos);                                 
+        ObservableList oHistorico = FXCollections.observableArrayList(calc);                                 
         tabelaHistórico.setItems(oHistorico);
     }
-    
     
 }

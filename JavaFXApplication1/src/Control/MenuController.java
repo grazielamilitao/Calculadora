@@ -136,7 +136,7 @@ public class MenuController implements Initializable {
     private void chamarHistórico(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/View/Histórico.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(),888,702);
+        Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setTitle("Histórico");
         stage.setScene(scene);
