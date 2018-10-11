@@ -1,27 +1,56 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Control;
 
+import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
-/**
- * FXML Controller class
- *
- * @author 04097711202
- */
 public class MenuController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    @FXML
+    private JFXTextField txtPrimeiro;
+    @FXML
+    private JFXTextField txtSegundo;
+    @FXML
+    private Button btnSoma;
+    @FXML
+    private Button btnSub;
+    @FXML
+    private Button btnDivi;
+    @FXML
+    private Button btnMult;
+    @FXML
+    private Label txtResult;
+    @FXML
+    private Button btnHistorico;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+
     }    
+
+    @FXML
+    private void Soma(ActionEvent event) {
+    }
+
+    @FXML
+    private void Subtracao(ActionEvent event) {
+    }
+
+    @FXML
+    private void Divisao(ActionEvent event) {
+    }
+
+    @FXML
+    private void Multiplicacao(ActionEvent event) {
+    }
+
+    @FXML
+    private void Historico(ActionEvent event) {
+    }
     
 }
