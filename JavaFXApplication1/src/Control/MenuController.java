@@ -132,9 +132,6 @@ public class MenuController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    //private void Historico(ActionEvent event) {
-        
-   // }
     
     @FXML
     private void chamarHistorico(ActionEvent event) {
