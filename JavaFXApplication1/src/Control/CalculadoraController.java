@@ -17,7 +17,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class MenuController implements Initializable {
+public class CalculadoraController implements Initializable {
 
     @FXML
     private JFXTextField txtPrimeiro;
