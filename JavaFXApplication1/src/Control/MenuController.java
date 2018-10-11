@@ -56,22 +56,86 @@ public class MenuController implements Initializable {
             c.setSegundoValor(Double.parseDouble(txtSegundo.getText()));
             c.setOperador("+");
             c.setResultado(resultado);
-            
+            em.getTransaction().begin();
+            em.persist(c);
+            em.getTransaction().commit();
     }
 
     @FXML
     private void Subtracao(ActionEvent event) {
+                double valor1= Double.parseDouble(txtPrimeiro.getText());
+        double valor2= Double.parseDouble(txtSegundo.getText());
+        double resultado=valor1-valor2;
+        txtResult.setText(""+resultado);
+        
+         EntityManagerFactory emf = Persistence.createEntityManagerFactory("Calculadora");
+         EntityManager em = emf.createEntityManager();
+
+            Calculadora c = new Calculadora();
+            c.setPrimeiroValor(Double.parseDouble(txtPrimeiro.getText()));
+            c.setSegundoValor(Double.parseDouble(txtSegundo.getText()));
+            c.setOperador("-");
+            c.setResultado(resultado);
+            em.getTransaction().begin();
+            em.persist(c);
+            em.getTransaction().commit();
     }
 
     @FXML
     private void Divisao(ActionEvent event) {
+                double valor1= Double.parseDouble(txtPrimeiro.getText());
+        double valor2= Double.parseDouble(txtSegundo.getText());
+        double resultado=valor1/valor2;
+        txtResult.setText(""+resultado);
+        
+         EntityManagerFactory emf = Persistence.createEntityManagerFactory("Calculadora");
+         EntityManager em = emf.createEntityManager();
+
+            Calculadora c = new Calculadora();
+            c.setPrimeiroValor(Double.parseDouble(txtPrimeiro.getText()));
+            c.setSegundoValor(Double.parseDouble(txtSegundo.getText()));
+            c.setOperador("/");
+            c.setResultado(resultado);
+            em.getTransaction().begin();
+            em.persist(c);
+            em.getTransaction().commit();
     }
 
     @FXML
     private void Multiplicacao(ActionEvent event) {
+                double valor1= Double.parseDouble(txtPrimeiro.getText());
+        double valor2= Double.parseDouble(txtSegundo.getText());
+        double resultado=valor1*valor2;
+        txtResult.setText(""+resultado);
+        
+         EntityManagerFactory emf = Persistence.createEntityManagerFactory("Calculadora");
+         EntityManager em = emf.createEntityManager();
+
+            Calculadora c = new Calculadora();
+            c.setPrimeiroValor(Double.parseDouble(txtPrimeiro.getText()));
+            c.setSegundoValor(Double.parseDouble(txtSegundo.getText()));
+            c.setOperador("*");
+            c.setResultado(resultado);
+            em.getTransaction().begin();
+            em.persist(c);
+            em.getTransaction().commit();
     }
 
     @FXML
+    private void Historico(ActionEvent event) throws IOException{
+         
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("View/Histórico.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(),600,400);
+        Stage stage = new Stage();
+        stage.setTitle("Historico");
+        stage.setScene(scene);
+        stage.show();
+    }
+    //private void Historico(ActionEvent event) {
+        
+   // }
+    
     private void chamarHistórico(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("view/Histórico.fxml"));
