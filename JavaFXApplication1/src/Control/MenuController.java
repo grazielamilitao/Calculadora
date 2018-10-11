@@ -2,13 +2,17 @@ package Control;
 
 import Model.Calculadora;
 import com.jfoenix.controls.JFXTextField;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -68,8 +72,20 @@ public class MenuController implements Initializable {
     }
 
     @FXML
-    private void Historico(ActionEvent event) {
+    private void chamarHistórico(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("view/Histórico.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(),888,702);
+        Stage stage = new Stage();
+        stage.setTitle("Histórico");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
     private void chamarHistorico(ActionEvent event) {
     }
+    
+    
     
 }

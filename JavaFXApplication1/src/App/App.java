@@ -23,7 +23,7 @@ public class App extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("View/Histórico.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("View/Menu.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
