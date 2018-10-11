@@ -23,8 +23,16 @@ public class Calculadora {
     
     private double primeiroValor;
     private double segundoValor;
-    private double operador;
+    private String operador;
     private double resultado;
+
+    public String getOperador() {
+        return operador;
+    }
+
+    public void setOperador(String operador) {
+        this.operador = operador;
+    }
 
     public int getTxtCodigo() {
         return txtCodigo;
@@ -50,13 +58,7 @@ public class Calculadora {
         this.segundoValor = segundoValor;
     }
 
-    public double getOperador() {
-        return operador;
-    }
-
-    public void setOperador(double operador) {
-        this.operador = operador;
-    }
+ 
 
     public double getResultado() {
         return resultado;
